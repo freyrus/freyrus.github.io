@@ -8,17 +8,23 @@ var gulp = require('gulp'),
     notify = require('gulp-notify'),
     compass = require('gulp-compass');
 
-// khai báo các đường dẫn và file sẽ dùng		
+// khai báo các đường dẫn và file sẽ dùng       
 var paths = {
     css: [
+        'bower_components/fullpage.js/jquery.fullPage.css',
         'css/*.css'
     ],
     js: [
         'bower_components/jquery/dist/jquery.min.js',
         'bower_components/bootstrap/dist/js/bootstrap.min.js',
+        'bower_components/jquery.slimscroll/jquery.slimscroll.min.js',
+        'bower_components/fullpage.js/vendors/jquery.easings.min.js',
+        'bower_components/fullpage.js/jquery.fullPage.min.js',
         'js/freyrus.js'
     ],
-    sass: ['sass/*.scss']
+    sass: [
+        'sass/*.scss'
+    ]
 };
 
 //tạo task cho js

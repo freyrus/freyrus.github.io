@@ -9,7 +9,7 @@
 <head>
     <meta http-equiv="content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>Freyrus - </title>
+    <title>Freyrus -</title>
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
@@ -18,6 +18,10 @@
     <!--[if lt IE 9]>
 <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
+    <!--Fonts-->
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Bubblegum+Sans' rel='stylesheet' type='text/css'>
     <script src="bower_components/modernizr/modernizr.js"></script>
 </head>
 
@@ -26,22 +30,58 @@
     <div class="wrapper">
         <!--header starts-->
         <header>
-            <div class="container"></div>
+            <div class="top-nav">
+                <div class="container">
+                    <span class="top-nav__contact-left"></span>
+                    <div class="top-nav__contact">
+                        Call +84 - 0199 855 8585 &nbsp &nbsp&nbsp <a href="mailto:hello@freyrus.com">hello@freyrus.com</a>
+                    </div>
+                    <span class="top-nav__contact-right"></span>
+                </div>
+            </div>
+            <div class="container">
+                <a href="#home" class="header__logo"><img src="images/logo.png" alt=""></a>
+                <div class="header__menu">
+                	<a class="header__menu-item" href="#home">HOME</a>
+                	<a class="header__menu-item" href="#we-can-help">WE CAN HELP </a>
+                	<a class="header__menu-item" href="#what-we-do">WHAT WE DO</a>
+                	<a class="header__menu-item" href="#who-we-are"> WHO WE ARE</a>
+                	<a class="header__menu-item" href="#get-in-touch">GET IN TOUCH</a>
+                </div>
+            </div>
         </header>
         <!--header ends-->
         <!--main starts-->
-        <div id="main"></div>
-        <!--main ends-->
-        <!--footer starts-->
-        <footer>
-            <!--footer-widgets-wrapper starts-->
-            <div class="footer-widgets-wrapper">
-                <!--container starts-->
-                <div class="container"></div>
+        <div id="main">
+            <div id="fullpage" class="pages">
+                <div class="section active pages__home">
+                	<div class="pages_hone-slogan_bg"></div>
+                	<div class="pages_hone-slogan_content">
+                		 <div class="container">
+                		 		<h1>We, Professional Developers</h1>
+                		 		<span class="hr"></span>
+                		 		<h3>We are focused on creating products and services that people want to use</h3>
+                		 		<a href="#we-can-help">Scroll to learn a little more about us</a>
+                		 </div>
+                	</div>
+                </div>
+                <div class="section pages__we_can_help">we can help</div>
+                <div class="section pages__what_we_do">what we do</div>
+                <div class="section pages__who_we_are">who we are</div>
+                <div class="section pages__get_in_touch">get in touch
+                    <!--footer starts-->
+                    <footer>
+                        <!--footer-widgets-wrapper starts-->
+                        <div class="footer-widgets-wrapper">
+                            <!--container starts-->
+                            <div class="container"></div>
+                        </div>
+                    </footer>
+                    <!--footer ends-->
+                </div>
             </div>
-        </footer>
-        <!--footer ends-->
-
+        </div>
+        <!--main ends-->
     </div>
     <!--wrapper ends-->
     <a href="" title="Go to Top" class="back-to-top">To Top ↑</a>
