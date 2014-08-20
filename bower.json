@@ -1,0 +1,22 @@
+{
+  "name": "Freyrus",
+  "version": "0.0.0",
+  "homepage": "http://freyrus.com",
+  "authors": [
+    "gialachoanglong <longnguyen.mail@gmail.com>"
+  ],
+  "description": "Freyrus website",
+  "main": "index.html",
+  "license": "Apache 2",
+  "private": true,
+  "ignore": [
+    "node_modules",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "1.11.1",
+    "bootstrap": "v3.2",
+    "modernizr": "~2.8.3"
+  }
+}
