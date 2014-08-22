@@ -266,66 +266,116 @@ $turquoise:rgba(255, 255, 255, 0.4);
     .pages__we_can_help {
         background: url(../../images/services-background.png);
         h2 {
-        	font-family: Lato, sans-serif;
-			font-weight: 300;
-            font-size: 50px;
+            font-family: Lato, sans-serif;
+            font-weight: 300;
+            font-size: 40px;
             color: #262626;
-            margin: 50px 0 10px 0;
+            margin: 100px 0 10px 0;
         }
         p{
-        	color: #262626;
-			font-size: 15px;
-			margin-top: 20px;
-			line-height: 30px;
+            color: #262626;
+            font-size: 15px;
+            margin-top: 10px;
+            line-height: 25px;
         }
-		.col-lg-4 p{
-			margin-top: 20px;
-			font-family: 'Lato', sans-serif;
-			font-size: 14px;
-			line-height: 22px;
-		}
+        .col-lg-4 p{
+            margin-top: 20px;
+            font-family: 'Lato', sans-serif;
+            font-size: 14px;
+            line-height: 22px;
+            text-align: justify;
+        }
         a{
-        	display: block;
-			vertical-align: bottom;
-			height: 200px;
-			clear: both;
-        	&:hover{
-        		text-decoration: none;
-        		background-position: center -300px !important; text-decoration: none; color:#cc292c;
-        	}
-        	&.e-commerce { background: transparent url(../../images/magento-btn.png) 50% 0 no-repeat; }
-        	&.mobile-web { background: transparent url(../../images/mobile-web-btn.png) 50% 0 no-repeat; }
-        	&.hire-a-team { background: transparent url(../../images/team-btn.png) 50% 0 no-repeat; }
-        	h3 {
-				position: relative;
-				bottom: -180px;
-				text-decoration: none;
-				font-size: 32px;
-				color: #d4232b ;
-				line-height: 27px;
-				&:hover { color:#cc292c; }
-			}
+            display: block;
+            vertical-align: bottom;
+            height: 110px;
+            clear: both;
+            &:hover{
+                text-decoration: none;
+                background-position: center -150px !important; text-decoration: none; color:#cc292c;
+            }
+            &.e-commerce { background: transparent url(../../images/magento-btn.png) 50% 0 no-repeat; }
+            &.mobile-web { background: transparent url(../../images/mobile-web-btn.png) 50% 0 no-repeat; }
+            &.hire-a-team { background: transparent url(../../images/team-btn.png) 50% 0 no-repeat; }
+            h3 {
+                position: relative;
+                bottom: -88px;
+                text-decoration: none;
+                font-size: 32px;
+                color: #d4232b ;
+                line-height: 27px;
+                &:hover { color:#cc292c; }
+            }
+        }
+        .product-list {
+            margin: 0 auto 24px;
+            padding: 0;
+            border-spacing: 12px;
+            width: 1004px;
+            display: table;
+            list-style: none;
+            overflow: hidden;
+            li {
+                box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                -webkit-box-sizing: border-box;
+                display: table-cell;
+                width: 112px;
+                span {
+                    display: block;
+                    text-indent: -9999px;
+                    overflow: hidden;
+                    width: 100%;
+                    height: 113px;
+                    background: #fff url(../../images/bg-product-list.png) 50% -91px no-repeat;
+                    -webkit-box-shadow: 0 1px 0 0 #cdd1d2;
+                    box-shadow: 0 1px 0 0 #cdd1d2;
+                    -webkit-border-radius: 5px;
+                    border-radius: 5px;
+                    &.jquery {
+                        background-position: 50% 46px;
+                    }
+                    &.email {
+                        background-position: 50% -206px;
+                    }
+                    &.wp {
+                        background-position: 50% -331px;
+                    }
+                    &.drupal {
+                        background-position: 50% -453px;
+                    }
+                    &.joomla {
+                        background-position: 50% -571px;
+                    }
+                    &.magento {
+                        background-position: 50% -696px;
+                    }
+                    &.shopify {
+                        background-position: 50% -820px;
+                    }
+                }
+            }
         }
     }
     .pages__what_we_do {
         background:#5e5d58 url(../../images/what_we_do.jpg) center no-repeat;
         .pages__what_we_do_header-title,.pages__what_we_do_bottom-title{
-			width: 100%;
-			height: 90px;
-			background:rgba(0, 0, 0, .7);
-			color: #fff;
-			display: block;
-			h2{
-				font-size: 30px;
-				margin-top: 15px;
-				font-family: Lato,sans-serif;
-				font-weight: 300;
-				margin-bottom: 5px;
-				display: inline-block;
-			}
-			p{
-				font-size: 15px;
-			}
+            width: 100%;
+            height: 90px;
+            background:rgba(0, 0, 0, .7);
+            color: #fff;
+            display: block;
+            h2{
+                font-size: 30px;
+                margin-top: 15px;
+                font-family: Lato,sans-serif;
+                font-weight: 300;
+                margin-bottom: 5px;
+                display: inline-block;
+            }
+            p{
+                font-size: 15px;
+            }
         }
         .pages__what_we_do_header-title{
             position:absolute;
@@ -333,9 +383,9 @@ $turquoise:rgba(255, 255, 255, 0.4);
             top:150px;
         }
         .pages__what_we_do_bottom-title{
-        	position:absolute;
-        	left: 0px;
-        	bottom:0px;
+            position:absolute;
+            left: 0px;
+            bottom:0px;
         }
         .list-project-min{
             float: left;

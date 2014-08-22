@@ -8,22 +8,22 @@ var gulp = require('gulp'),
     notify = require('gulp-notify'),
     compass = require('gulp-compass');
 
-// khai báo các đường dẫn và file sẽ dùng       
+// khai báo các đường dẫn và file sẽ dùng
 var paths = {
     css: [
-        'bower_components/fullpage.js/jquery.fullPage.css',
-        'css/*.css'
+        './bower_components/fullpage.js/jquery.fullPage.css',
+        './css/*.css'
     ],
     js: [
-        'bower_components/jquery/dist/jquery.min.js',
-        'bower_components/bootstrap/dist/js/bootstrap.min.js',
-        'bower_components/jquery.slimscroll/jquery.slimscroll.min.js',
-        'bower_components/fullpage.js/vendors/jquery.easings.min.js',
-        'bower_components/fullpage.js/jquery.fullPage.min.js',
-        'js/freyrus.js'
+        './bower_components/jquery/dist/jquery.min.js',
+        './bower_components/bootstrap/dist/js/bootstrap.min.js',
+        './bower_components/jquery.slimscroll/jquery.slimscroll.min.js',
+        './bower_components/fullpage.js/vendors/jquery.easings.min.js',
+        './bower_components/fullpage.js/jquery.fullPage.min.js',
+        './js/freyrus.js'
     ],
     sass: [
-        'sass/*.scss'
+        './sass/*.scss'
     ]
 };
 
@@ -32,7 +32,7 @@ gulp.task('js', function() {
     gulp.src(paths.js)
         .pipe(uglify())
         .pipe(concat('freyrus.min.js'))
-        .pipe(gulp.dest('build/js'));
+        .pipe(gulp.dest('./build/js'));
 });
 
 //tạo task cho css
@@ -40,7 +40,7 @@ gulp.task('css', function() {
     gulp.src(paths.css)
         .pipe(concat('style.min.css'))
         .pipe(minifyCSS())
-        .pipe(gulp.dest('build/css'));
+        .pipe(gulp.dest('./build/css'));
 });
 
 //tạo task cho compass
@@ -52,12 +52,13 @@ gulp.task('compass', function() {
             image: 'images'
         }))
         .on('error', function(err) {
+            console.log(err);
             // Would like to catch the error here
         })
-        .pipe(gulp.dest('css'));
+        .pipe(gulp.dest('./css'));
 });
 
-//tạo task watch để theo dõi các file nếu file thay đổi thì thực hiện các task liên quan 
+//tạo task watch để theo dõi các file nếu file thay đổi thì thực hiện các task liên quan
 gulp.task('watch', function() {
     gulp.watch(paths.sass, ['compass']);
     gulp.watch(paths.css, ['css']);
