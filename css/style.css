@@ -1,50 +1,38 @@
 /*variable*/
 @-webkit-keyframes downarrow {
-  /* line 6, ../sass/style.scss */
   0% {
     -webkit-transform: translateY(0);
     opacity: 0.4;
   }
-
-  /* line 10, ../sass/style.scss */
   100% {
     -webkit-transform: translateY(0.4em);
     opacity: 0.9;
   }
 }
-
 @-webkit-keyframes fadeInDown {
-  /* line 16, ../sass/style.scss */
   0% {
     opacity: 0;
     -webkit-transform: translate3d(0, -100%, 0);
   }
-
-  /* line 20, ../sass/style.scss */
   100% {
     opacity: 0.7;
     -webkit-transform: none;
   }
 }
-
 /* line 25, ../sass/style.scss */
 .fadeInDown {
   -webkit-animation-name: fadeInDown;
 }
 
 @-webkit-keyframes fadeInUp {
-  /* line 29, ../sass/style.scss */
   0% {
     opacity: 0;
   }
-
-  /* line 32, ../sass/style.scss */
   100% {
     opacity: 0.7;
     -webkit-transform: none;
   }
 }
-
 /* line 37, ../sass/style.scss */
 .fadeInUp {
   -webkit-animation-name: fadeInUp;
@@ -247,31 +235,23 @@ header.small-wapper .header__menu .header__menu-item {
 }
 
 @-webkit-keyframes bounce {
-  /* line 203, ../sass/style.scss */
   0%, 100% {
     transform: translateY(-3%);
     background-position: 50% 48%;
   }
-
-  /* line 207, ../sass/style.scss */
   50% {
     transform: translateY(3%);
     background-position: 50% 52%;
   }
 }
-
 @-webkit-keyframes glow {
-  /* line 213, ../sass/style.scss */
   20% {
     box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.3), inset 0 0 0 0 rgba(255, 255, 255, 0.3);
   }
-
-  /* line 216, ../sass/style.scss */
   100% {
     box-shadow: 0 0 0 50px rgba(255, 255, 255, 0), inset 0 0 0 12px rgba(255, 255, 255, 0);
   }
 }
-
 /* line 220, ../sass/style.scss */
 .pages {
   text-align: center;
@@ -336,16 +316,16 @@ header.small-wapper .header__menu .header__menu-item {
 .pages .pages__we_can_help h2 {
   font-family: Lato, sans-serif;
   font-weight: 300;
-  font-size: 50px;
+  font-size: 40px;
   color: #262626;
-  margin: 50px 0 10px 0;
+  margin: 100px 0 10px 0;
 }
 /* line 275, ../sass/style.scss */
 .pages .pages__we_can_help p {
   color: #262626;
   font-size: 15px;
-  margin-top: 20px;
-  line-height: 30px;
+  margin-top: 10px;
+  line-height: 25px;
 }
 /* line 281, ../sass/style.scss */
 .pages .pages__we_can_help .col-lg-4 p {
@@ -353,51 +333,111 @@ header.small-wapper .header__menu .header__menu-item {
   font-family: 'Lato', sans-serif;
   font-size: 14px;
   line-height: 22px;
+  text-align: justify;
 }
-/* line 287, ../sass/style.scss */
+/* line 288, ../sass/style.scss */
 .pages .pages__we_can_help a {
   display: block;
   vertical-align: bottom;
-  height: 200px;
+  height: 110px;
   clear: both;
 }
-/* line 292, ../sass/style.scss */
+/* line 293, ../sass/style.scss */
 .pages .pages__we_can_help a:hover {
   text-decoration: none;
-  background-position: center -300px !important;
+  background-position: center -150px !important;
   text-decoration: none;
   color: #cc292c;
 }
-/* line 296, ../sass/style.scss */
+/* line 297, ../sass/style.scss */
 .pages .pages__we_can_help a.e-commerce {
   background: transparent url(../../images/magento-btn.png) 50% 0 no-repeat;
 }
-/* line 297, ../sass/style.scss */
+/* line 298, ../sass/style.scss */
 .pages .pages__we_can_help a.mobile-web {
   background: transparent url(../../images/mobile-web-btn.png) 50% 0 no-repeat;
 }
-/* line 298, ../sass/style.scss */
+/* line 299, ../sass/style.scss */
 .pages .pages__we_can_help a.hire-a-team {
   background: transparent url(../../images/team-btn.png) 50% 0 no-repeat;
 }
-/* line 299, ../sass/style.scss */
+/* line 300, ../sass/style.scss */
 .pages .pages__we_can_help a h3 {
   position: relative;
-  bottom: -180px;
+  bottom: -88px;
   text-decoration: none;
   font-size: 32px;
   color: #d4232b;
   line-height: 27px;
 }
-/* line 306, ../sass/style.scss */
+/* line 307, ../sass/style.scss */
 .pages .pages__we_can_help a h3:hover {
   color: #cc292c;
 }
 /* line 310, ../sass/style.scss */
+.pages .pages__we_can_help .product-list {
+  margin: 0 auto 24px;
+  padding: 0;
+  border-spacing: 12px;
+  width: 1004px;
+  display: table;
+  list-style: none;
+  overflow: hidden;
+}
+/* line 318, ../sass/style.scss */
+.pages .pages__we_can_help .product-list li {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  display: table-cell;
+  width: 112px;
+}
+/* line 324, ../sass/style.scss */
+.pages .pages__we_can_help .product-list li span {
+  display: block;
+  text-indent: -9999px;
+  overflow: hidden;
+  width: 100%;
+  height: 113px;
+  background: #fff url(../../images/bg-product-list.png) 50% -91px no-repeat;
+  -webkit-box-shadow: 0 1px 0 0 #cdd1d2;
+  box-shadow: 0 1px 0 0 #cdd1d2;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+/* line 335, ../sass/style.scss */
+.pages .pages__we_can_help .product-list li span.jquery {
+  background-position: 50% 46px;
+}
+/* line 338, ../sass/style.scss */
+.pages .pages__we_can_help .product-list li span.email {
+  background-position: 50% -206px;
+}
+/* line 341, ../sass/style.scss */
+.pages .pages__we_can_help .product-list li span.wp {
+  background-position: 50% -331px;
+}
+/* line 344, ../sass/style.scss */
+.pages .pages__we_can_help .product-list li span.drupal {
+  background-position: 50% -453px;
+}
+/* line 347, ../sass/style.scss */
+.pages .pages__we_can_help .product-list li span.joomla {
+  background-position: 50% -571px;
+}
+/* line 350, ../sass/style.scss */
+.pages .pages__we_can_help .product-list li span.magento {
+  background-position: 50% -696px;
+}
+/* line 353, ../sass/style.scss */
+.pages .pages__we_can_help .product-list li span.shopify {
+  background-position: 50% -820px;
+}
+/* line 360, ../sass/style.scss */
 .pages .pages__what_we_do {
   background: #5e5d58 url(../../images/what_we_do.jpg) center no-repeat;
 }
-/* line 312, ../sass/style.scss */
+/* line 362, ../sass/style.scss */
 .pages .pages__what_we_do .pages__what_we_do_header-title, .pages .pages__what_we_do .pages__what_we_do_bottom-title {
   width: 100%;
   height: 90px;
@@ -405,7 +445,7 @@ header.small-wapper .header__menu .header__menu-item {
   color: #fff;
   display: block;
 }
-/* line 318, ../sass/style.scss */
+/* line 368, ../sass/style.scss */
 .pages .pages__what_we_do .pages__what_we_do_header-title h2, .pages .pages__what_we_do .pages__what_we_do_bottom-title h2 {
   font-size: 30px;
   margin-top: 15px;
@@ -414,28 +454,30 @@ header.small-wapper .header__menu .header__menu-item {
   margin-bottom: 5px;
   display: inline-block;
 }
-/* line 326, ../sass/style.scss */
+/* line 376, ../sass/style.scss */
 .pages .pages__what_we_do .pages__what_we_do_header-title p, .pages .pages__what_we_do .pages__what_we_do_bottom-title p {
   font-size: 15px;
 }
-/* line 330, ../sass/style.scss */
+/* line 380, ../sass/style.scss */
 .pages .pages__what_we_do .pages__what_we_do_bottom-title {
   position: absolute;
   left: 0px;
   bottom: 0px;
 }
-/* line 336, ../sass/style.scss */
+/* line 386, ../sass/style.scss */
 .pages .pages__who_we_are {
   background: #EEEEEE;
 }
-/* line 339, ../sass/style.scss */
+/* line 389, ../sass/style.scss */
 .pages .pages__get_in_touch {
   background: #17649A;
 }
 
-/* line 343, ../sass/style.scss */
+/* line 393, ../sass/style.scss */
 .back-to-top {
   position: absolute;
   bottom: 20px;
   right: 30px;
 }
+
+/*# sourceMappingURL=style.css.map */

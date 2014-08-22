@@ -1,3 +1,43 @@
+var weCanHelpPage = (function () {
+    'use strict';
+    var initModule, initHoverProduct,
+        config = {
+            relationships: {
+                'e-commerce': [0, 1, 2],
+                'mobile-web': [3, 4, 5],
+                'hire-a-team': [6, 7]
+            }
+        },
+        stateMap = {
+            $container: null
+        };
+    initModule = function (container) {
+        stateMap.$container = $(container);
+        initHoverProduct();
+    };
+    initHoverProduct = function () {
+        stateMap.$container.find('.main-help').hover(function () {
+            var className = $(this).attr('class').split(' '),
+                relation;
+            if (className) {
+                className = className[1];
+                relation = config.relationships[className]; /* return array */
+                if (relation) {
+                    stateMap.$container.find('.product-list span').each(function (index) {
+                        if (jQuery.inArray(index, relation) !== -1) {
+                            $(this).addClass('active');
+                        } else {
+                            $(this).removeClass('active');
+                        }
+                    });
+                }
+            }
+        });
+    };
+    return {
+        initModule: initModule
+    };
+}());
 $(document).ready(function() {
     $('#fullpage').fullpage({
         verticalCentered: true,
@@ -68,4 +108,5 @@ $(document).ready(function() {
 
         }
     });
+    weCanHelpPage.initModule('section.pages__we_can_help');
 });
