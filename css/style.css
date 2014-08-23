@@ -470,10 +470,45 @@ header.small-wapper .header__menu .header__menu-item {
 }
 /* line 389, ../sass/style.scss */
 .pages .pages__get_in_touch {
-  background: #17649A;
+  background: url(../../images/services-background.png);
+}
+/* line 391, ../sass/style.scss */
+.pages .pages__get_in_touch .working-list {
+  margin: 0 auto 24px;
+  padding: 0;
+  border-spacing: 12px;
+  display: table;
+  list-style: none;
+}
+/* line 397, ../sass/style.scss */
+.pages .pages__get_in_touch .working-list li {
+  display: table-cell;
+  padding: 10px;
+}
+/* line 400, ../sass/style.scss */
+.pages .pages__get_in_touch .working-list li span {
+  display: block;
+  font-size: 16px;
+  color: #aaaaaa;
+}
+/* line 404, ../sass/style.scss */
+.pages .pages__get_in_touch .working-list li span img {
+  padding-right: 5px;
+  position: relative;
+  top: -3px;
+}
+/* line 412, ../sass/style.scss */
+.pages .pages__get_in_touch .contact-text {
+  font-weight: bold;
+  font-size: 16px;
+}
+/* line 415, ../sass/style.scss */
+.pages .pages__get_in_touch .contact-text .phone {
+  padding-top: 20px;
+  color: red;
 }
 
-/* line 393, ../sass/style.scss */
+/* line 422, ../sass/style.scss */
 .back-to-top {
   position: absolute;
   bottom: 20px;

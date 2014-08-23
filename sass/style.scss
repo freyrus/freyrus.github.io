@@ -387,7 +387,36 @@ $turquoise:rgba(255, 255, 255, 0.4);
         background: #EEEEEE;
     }
     .pages__get_in_touch {
-        background: #17649A;
+        background: url(../../images/services-background.png);
+        .working-list {
+            margin: 0 auto 24px;
+            padding: 0;
+            border-spacing: 12px;
+            display: table;
+            list-style: none;
+            li {
+                display: table-cell;
+                padding: 10px;
+                span {
+                    display: block;
+                    font-size: 16px;
+                    color: #aaaaaa;
+                    img {
+                        padding-right: 5px;
+                        position: relative;
+                        top: -3px;
+                    }
+                }
+            }
+        }
+        .contact-text {
+            font-weight: bold;
+            font-size: 16px;
+            .phone {
+                padding-top: 20px;
+                color: red;
+            }
+        }
     }
 }
 .back-to-top {
