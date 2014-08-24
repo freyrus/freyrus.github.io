@@ -137,7 +137,7 @@ header {
             -webkit-text-stroke-color: rgba(255, 255, 255, 0.2);
             -webkit-text-fill-color: #000;
             text-shadow: 2.5px 4.33px 5px rgba(0, 0, 0, 0.4);
-            &:hover {
+            &:hover,&.active {
                 color: #428bca;
                 text-decoration: none;
                 -webkit-text-fill-color: #428bca;
@@ -362,7 +362,7 @@ $turquoise:rgba(255, 255, 255, 0.4);
         .pages__what_we_do_header-title,.pages__what_we_do_bottom-title{
             width: 100%;
             height: 90px;
-            background:rgba(0, 0, 0, .7);
+            background:rgba(0, 0, 0, .5);
             color: #fff;
             display: block;
             h2{
@@ -392,77 +392,96 @@ $turquoise:rgba(255, 255, 255, 0.4);
             width: 80%;
             margin: 0 0 0 10%;
             text-align: left;
-            position:absolute;
-            left: 0px;
-            bottom:0px;
-            padding: 0px;
+            position: absolute;
+            left: 0;
+            bottom: 90px;
+            padding: 0;
+            vertical-align: bottom;
             li{
-                height: 397px;
+                height: 100%;
                 float: left;
                 position: relative;
                 width: 25%;
                 list-style: none;
-                -webkit-transition: all 0.25s 0s ease;
-                transition: all 0.25s 0s ease;
+                -webkit-transition: all .25s 0s ease;
+                transition: all .25s 0s ease;
+                vertical-align: bottom;
                 a{
                     float: left;
                     width: 100%;
                     height: 100%;
                     display: block;
-                    bottom:0px;
-                    position: absolute;
-                    overflow: hidden;
-                    padding: 0px 40px;
+                    bottom: 0;
+                    position: relative;
+                    padding: 0 40px;
+                    vertical-align: bottom;
                 }
-                h2{
+                .project_name{
                     position: absolute;
                     left: 40px;
                     right: 40px;
-                    bottom: 20px;
+                    bottom: -60px;
+                    height: 100%;
                     text-align: center;
-                    color: #fff;
-                    font-size: 1.5em;
-                    line-height: 32px;
-                    font-weight: 700;
-                      font-family: 'Open Sans';
-                    -webkit-transition: all 0.25s 0s ease;
-                    transition: all 0.25s 0s ease;
+                    -webkit-transition: all .25s 0s ease;
+                    transition: all .25s 0s ease;
+                    vertical-align: text-bottom;
+                    h2{
+                        position: absolute;
+                        bottom: 0px;
+                        width: 100%;
+                        text-align: center;
+                        color: #fff;
+                        font-size: 1.5em;
+                        line-height: 32px;
+                        font-weight: 700;
+                        font-family: 'Open Sans';
+                    }
                 }
                 figure {
                     float: left;
                     width: 100%;
-                    height: 100%;
+                    height: auto;
                     position: relative;
-                    top: 0;
-                    -webkit-transition: all 0.25s 0s ease;
-                    transition: all 0.25s 0s ease;
+                    -webkit-transition: all .25s 0s ease;
+                    transition: all .25s 0s ease;
+                    overflow: hidden;
+                    padding:20px 20px 0;
                     .preview {
-                        position: absolute;
                         width: 100%;
-                        left: 0;
-                        bottom: 90px;
+                        -webkit-transition: all .25s 0s ease;
+                        transition: all .25s 0s ease;
                         -webkit-box-shadow: 0px 0px 50px 0px rgba(0,0,0,0.5);
-                        box-shadow: 0px 0px 50px 0px rgba(0,0,0,0.5);
-                        -webkit-transition: all 0.25s 0s ease;
-                        transition: all 0.25s 0s ease;
+                        box-shadow: 0px 0px 20px 5px rgba(0,0,0,0.5);
                     }
                 }
                 .readMore {
-                    height: 80px;
-                    line-height: 80px;
+                    height: 30px;
                     position: absolute;
-                    bottom: 0;
+                    bottom: -60px;
                     left: 0;
                     display: none;
                     width: 100%;
-                    padding: 0 40px;
-                    color: #fff;
-                    font-size: 13px;
-                    font-weight: 700;
-                    text-transform: uppercase;
-                    border-bottom: 1px solid #384452;
+                    text-transform: capitalize;
                     -webkit-transition: all 0.25s 0s ease;
                     transition: all 0.25s 0s ease;
+                    text-align: center;
+                    color: #fff;
+                    font-size: 1.3em;
+                    font-weight: 700;
+                    font-family: 'Open Sans';
+                }
+                .project_name_up{
+                    h2{
+                        font-weight: lighter;
+                        font-family: Lato,sans-serif;
+                    }
+                    -webkit-transform: translate3d(0, -100%, 0);
+                }
+                .figure_down {
+                    img{
+                        -webkit-transform: translate3d(0, 40%, 0);
+                    }
                 }
             }
         }

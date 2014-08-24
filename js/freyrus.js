@@ -1,4 +1,4 @@
-var weCanHelpPage = (function () {
+var weCanHelpPage = (function() {
     'use strict';
     var initModule, initHoverProduct,
         config = {
@@ -11,19 +11,19 @@ var weCanHelpPage = (function () {
         stateMap = {
             $container: null
         };
-    initModule = function (container) {
+    initModule = function(container) {
         stateMap.$container = $(container);
         initHoverProduct();
     };
-    initHoverProduct = function () {
-        stateMap.$container.find('.main-help').hover(function () {
+    initHoverProduct = function() {
+        stateMap.$container.find('.main-help').hover(function() {
             var className = $(this).attr('class').split(' '),
                 relation;
             if (className) {
                 className = className[1];
                 relation = config.relationships[className]; /* return array */
                 if (relation) {
-                    stateMap.$container.find('.product-list span').each(function (index) {
+                    stateMap.$container.find('.product-list span').each(function(index) {
                         if (jQuery.inArray(index, relation) !== -1) {
                             $(this).addClass('active');
                         } else {
@@ -73,6 +73,8 @@ $(document).ready(function() {
 
         //events
         onLeave: function(index, nextIndex, direction) {
+            $(".header__menu-item" ).removeClass('active');
+            $(".header__menu-item:eq("+(nextIndex-1)+")" ).addClass('active');
             if (nextIndex > 1) {
                 $('.pages_hone-slogan_bg').removeClass('animated fadeInDown');
                 $('.pages_hone-slogan_content').removeClass('animated fadeInDown');
@@ -109,4 +111,17 @@ $(document).ready(function() {
         }
     });
     weCanHelpPage.initModule('section.pages__we_can_help');
+    //what we do
+    var project_item = $('.list-project-min a figure');
+    project_item.hover(function() {
+        $(this).addClass('figure_down');
+        var parent = $(this).parent();
+        parent.find('.project_name').stop().addClass('project_name_up');
+        parent.find('.readMore').stop().slideDown('fast');
+    }, function() {
+        $(this).removeClass('figure_down');
+        var parent = $(this).parent();
+        parent.find('.project_name').stop().removeClass('project_name_up');
+        parent.find('.readMore').stop().slideUp('fast');
+    });
 });
