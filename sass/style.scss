@@ -533,35 +533,94 @@ $turquoise:rgba(255, 255, 255, 0.4);
         background: #EEEEEE;
     }
     .pages__get_in_touch {
-        background: url(../../images/services-background.png);
-        .working-list {
-            margin: 0 auto 24px;
-            padding: 0;
-            border-spacing: 12px;
+        .pages__get_in_touch-top,.pages__get_in_touch-map{
+            width: 100%;
+            display: inline-block;
+            height: 50%;
             display: table;
-            list-style: none;
-            li {
+            position:relative;
+            .container{
                 display: table-cell;
-                padding: 10px;
-                span {
-                    display: block;
-                    font-size: 16px;
-                    color: #aaaaaa;
-                    img {
-                        padding-right: 5px;
-                        position: relative;
-                        top: -3px;
-                    }
+                vertical-align: middle;
+                p{
+                    color: #fff;
                 }
             }
         }
-        .contact-text {
-            font-weight: bold;
-            font-size: 16px;
-            .phone {
-                padding-top: 20px;
-                color: red;
+        .pages__get_in_touch-map{
+            height:calc(((100% - 90px) / 2) - 15%);
+        }
+        .pages__get_in_touch-top{
+            margin-top:90px;
+            height:calc(((100% - 90px) / 2) + 15%);
+            background:#576d83 url(../../images/get-in-touch.jpg) center no-repeat;
+            background-size:100% auto;
+            h2{
+                color:#fff;
             }
+            .working-list {
+                margin: 0 auto 24px;
+                padding: 0;
+                border-spacing: 12px;
+                display: table;
+                list-style: none;
+                li {
+                    display: table-cell;
+                    padding: 5px 10px;
+                    background:rgba(255, 255, 255, 0.7);
+                    @include transition(all .25s 0s ease);
+                    &:hover{
+                        background:#fff;
+                        span{
+                            @include filter(contrast(180%));
+                        }
+                    }
+                    span {
+                        display: block;
+                        color: #fff;
+                        text-indent: -9999px;
+                        overflow: hidden;
+                        &:hover{
+                            cursor: pointer;
+                        }
+                        width: 175px;
+                        height: 50px;
+                        background: transparent inline-image("social.png") left top no-repeat;
+                        &.themeforest{
+                            background-position: -175px 0;
+                            width: 200px;
+                        }
+                        &.graphicriver{
+                             background-position: -380px 0;
+                            width: 150px;
+                        }
+                        &.github{
+                            background-position: -535px 0;
+                            width: 85px;
+                        }
+                        &.twitter{
+                           background-position: -620px 0;
+                            width: 148px;
+                        }
+                    }
+                }
+            }
+            .contact-text {
+                font-weight: bold;
+                font-size: 16px;
+                .phone {
+                    padding-top: 20px;
+                    color:#5A89AC;
+                }
+            }
+        }
+        #map{
+            position:absolute;
+            bottom:0px;
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+            float: left;
         }
     }
 }
