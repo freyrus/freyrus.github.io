@@ -4,22 +4,22 @@ $blue_light:#1873b7;
  $blue:#0b67aa;
 @-webkit-keyframes downarrow {
     0% {
-        -webkit-transform: translateY(0);
-        opacity: 0.4
+        @include transform(translateY(0));
+        @include opacity(0.4);
     }
     100% {
-        -webkit-transform: translateY(0.4em);
-        opacity: 0.9
+        @include transform(translateY(0.4em));
+        @include opacity(0.9);
     }
 }
 @-webkit-keyframes fadeInDown {
     0% {
-        opacity: 0;
-        -webkit-transform: translate3d(0, -100%, 0);
+        @include opacity(0);
+        @include transform(translate3d(0, -100%, 0));
     }
     100% {
-        opacity: 0.7;
-        -webkit-transform: none;
+        @include opacity(0.7);
+        @include transform(none);
     }
 }
 .fadeInDown {
@@ -27,11 +27,11 @@ $blue_light:#1873b7;
 }
 @-webkit-keyframes fadeInUp {
     0% {
-        opacity: 0;
+        @include opacity(0);
     }
     100% {
-        opacity: 0.7;
-        -webkit-transform: none;
+        @include opacity(0.7);
+        @include transform(none);
     }
 }
 .fadeInUp {
@@ -181,7 +181,7 @@ $turquoise:rgba(255, 255, 255, 0.4);
     background-repeat: no-repeat;
     background-image: url(../../images/scrolldown.png);
     background-position: 50% 50%;
-    border-radius: 50%;
+    @include border-radius(50%);
     -webkit-animation: bounce 1s infinite;
     &:before, &:after {
         content: '';
@@ -192,7 +192,7 @@ $turquoise:rgba(255, 255, 255, 0.4);
         left: 0;
         width: 100%;
         height: 100%;
-        border-radius: 50%;
+        @include border-radius(50%);
         -webkit-animation: glow 1s infinite;
     }
     &:hover {
@@ -201,7 +201,7 @@ $turquoise:rgba(255, 255, 255, 0.4);
 }
 @-webkit-keyframes bounce {
     0%, 100% {
-        transform: translateY(-3%);
+        @include transform(translateY(-3%));
         background-position: 50% 48%;
     }
     50% {
@@ -342,15 +342,11 @@ $turquoise:rgba(255, 255, 255, 0.4);
                     overflow: hidden;
                     width: 155px;
                     height: 100px;
-                    -webkit-transition: all 1s ease;
-                         -moz-transition: all 0.3s ease;
-                           -o-transition: all 0.3s ease;
-                          -ms-transition: all 0.3s ease;
-                              transition: all 0.3s ease;
-                      -webkit-filter: grayscale(95%);
+                    @include transition(all .2s ease);
+                      @include filter(grayscale(100%));
                       &:hover{
                         cursor: pointer;
-                        -webkit-filter: grayscale(0%);
+                        @include filter(grayscale(0%));
                       }        
                     background: transparent inline-image("bg-product-list.png") left top no-repeat;
                         &.drupal {
@@ -456,8 +452,7 @@ $turquoise:rgba(255, 255, 255, 0.4);
                 position: relative;
                 width: 25%;
                 list-style: none;
-                -webkit-transition: all .25s 0s ease;
-                transition: all .25s 0s ease;
+                @include transition(all .25s 0s ease);
                 vertical-align: bottom;
                 a{
                     float: left;
@@ -476,8 +471,7 @@ $turquoise:rgba(255, 255, 255, 0.4);
                     bottom: -60px;
                     height: 100%;
                     text-align: center;
-                    -webkit-transition: all .25s 0s ease;
-                    transition: all .25s 0s ease;
+                    @include transition(all .25s 0s ease);
                     vertical-align: text-bottom;
                     h2{
                         position: absolute;
@@ -496,16 +490,13 @@ $turquoise:rgba(255, 255, 255, 0.4);
                     width: 100%;
                     height: auto;
                     position: relative;
-                    -webkit-transition: all .25s 0s ease;
-                    transition: all .25s 0s ease;
+                    @include transition(all .25s 0s ease);
                     overflow: hidden;
                     padding:20px 20px 0;
                     .preview {
                         width: 100%;
-                        -webkit-transition: all .25s 0s ease;
-                        transition: all .25s 0s ease;
-                        -webkit-box-shadow: 0px 0px 50px 0px rgba(0,0,0,0.5);
-                        box-shadow: 0px 0px 20px 5px rgba(0,0,0,0.5);
+                        @include transition(all .25s 0s ease);
+                        @include box-shadow(0px 0px 50px 0px rgba(0,0,0,0.5));
                     }
                 }
                 .readMore {
@@ -516,8 +507,7 @@ $turquoise:rgba(255, 255, 255, 0.4);
                     display: none;
                     width: 100%;
                     text-transform: capitalize;
-                    -webkit-transition: all 0.25s 0s ease;
-                    transition: all 0.25s 0s ease;
+                    @include transition(all .25s 0s ease);
                     text-align: center;
                     color: #fff;
                     font-size: 1.3em;
@@ -529,11 +519,11 @@ $turquoise:rgba(255, 255, 255, 0.4);
                         font-weight: lighter;
                         font-family: Lato,sans-serif;
                     }
-                    -webkit-transform: translate3d(0, -100%, 0);
+                    @include transform(translate3d(0, -100%, 0));
                 }
                 .figure_down {
                     img{
-                        -webkit-transform: translate3d(0, 40%, 0);
+                        @include transform(translate3d(0, 40%, 0));
                     }
                 }
             }
