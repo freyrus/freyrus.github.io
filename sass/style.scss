@@ -1,7 +1,7 @@
 /*variable*/
 @import "compass";
 $blue_light:#1873b7;
- $blue:#0b67aa;
+$blue:#0b67aa;
 @-webkit-keyframes downarrow {
     0% {
         @include transform(translateY(0));
@@ -52,8 +52,15 @@ html, body {
     padding: 0px 0px 0px;
     width: 100%;
 }
-.wrapper{
-    display: none;
+.wrapper-plus{
+    width: 100%;
+    height: 100%;
+    display: block;
+    background: #f0f3f3;
+    position:fixed;
+    top:0px;
+    left: 0px;
+    z-index: 10;
 }
 #fullpage .table {
     margin-bottom: 0px;
@@ -76,8 +83,8 @@ html, body {
 }
 .pace .pace-progress{
     top: 30%;
-    right: 45%;
-    right: calc((100% - 10em) / 2);
+    right: 40%;
+    right: calc((100% - 20em) / 2);
 }
 .pace .pace-progress:after{
     font-size: 10em;
@@ -92,7 +99,7 @@ header {
     position: absolute;
     top: 0px;
     left: 0px;
-    z-index: 9999;
+    z-index: 9;
     background: transparent;
     .top-nav {
         width: 100%;
@@ -152,16 +159,9 @@ header {
             color: #000;
             font-size: 18px;
             margin: 0px 15px;
-            -webkit-text-stroke-width: 2px;
-            -webkit-text-stroke-color: rgba(255, 255, 255, 0.2);
-            -webkit-text-fill-color: #000;
-            text-shadow: 2.5px 4.33px 5px rgba(0, 0, 0, 0.4);
             &:hover,&.active {
                 color: #428bca;
                 text-decoration: none;
-                -webkit-text-fill-color: #428bca;
-                -webkit-text-stroke-color: rgba(13, 104, 171, 0.5);
-                text-shadow: 2.5px 4.33px 5px rgba(0, 0, 0, 0.7);
             }
         }
     }
@@ -311,6 +311,7 @@ $turquoise:rgba(255, 255, 255, 0.4);
             vertical-align: bottom;
             height: 110px;
             clear: both;
+            @include transition(all .35s 0s ease);
             &:hover{
                 text-decoration: none;
                 background-position: center -150px !important; text-decoration: none; color:#cc292c;
@@ -518,7 +519,6 @@ $turquoise:rgba(255, 255, 255, 0.4);
                     .preview {
                         width: 100%;
                         @include transition(all .25s 0s ease);
-                        /*@include box-shadow(0px 0px 20px 0px rgba(0,0,0,0.5));*/
                     }
                 }
                 .readMore {
@@ -705,7 +705,22 @@ $turquoise:rgba(255, 255, 255, 0.4);
     }
 }
 .back-to-top {
+    display: none;
     position: absolute;
+    @include border-radius(50%);
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    line-height: 35px;
+    font-size: 20px;
+    text-align: center;
+    background:$blue_light;
+    color: #fff;
     bottom: 20px;
     right: 30px;
+    @include transition(all .25s 0s ease);
+    &:hover{
+        background:#fff;
+        color: $blue_light;
+    }
 }
