@@ -44,15 +44,16 @@ html, body {
     font-size: 14px;
     line-height: 22px;
 }
-body{
-    display:none;
-}
+
 .wrapper, .main #main {
     float: left;
     clear: both;
     margin: 0px;
     padding: 0px 0px 0px;
     width: 100%;
+}
+.wrapper{
+    display: none;
 }
 #fullpage .table {
     margin-bottom: 0px;
@@ -72,6 +73,15 @@ body{
     display: block;
     width: 100%;
     height: 13px;
+}
+.pace .pace-progress{
+    top: 30%;
+    right: 45%;
+    right: calc((100% - 10em) / 2);
+}
+.pace .pace-progress:after{
+    font-size: 10em;
+    color: $blue_light;
 }
 header {
     width: 100%;

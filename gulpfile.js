@@ -11,6 +11,7 @@ var gulp = require('gulp'),
 // khai báo các đường dẫn và file sẽ dùng
 var paths = {
     css: [
+        './bower_components/pace/themes/blue/pace-theme-big-counter.css',
         './bower_components/fullpage.js/jquery.fullPage.css',
         './css/*.css'
     ],
@@ -20,6 +21,7 @@ var paths = {
         './bower_components/jquery.slimscroll/jquery.slimscroll.min.js',
         './bower_components/fullpage.js/vendors/jquery.easings.min.js',
         './bower_components/fullpage.js/jquery.fullPage.min.js',
+        './bower_components/pace/pace.min.js',
         './js/freyrus.js'
     ],
     sass: [

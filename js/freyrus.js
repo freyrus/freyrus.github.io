@@ -38,8 +38,14 @@ var weCanHelpPage = (function() {
         initModule: initModule
     };
 }());
+Pace.on("start", function(){
+    console.log('run');
+});
+
+Pace.on("done", function(){
+    $('.wrapper').fadeIn(400);
+});
 $(document).ready(function() {
-    $('body').fadeIn();
     $('#fullpage').fullpage({
         verticalCentered: true,
         resize: true,
