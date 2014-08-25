@@ -1,5 +1,6 @@
 /*variable*/
 @import "compass";
+@import "responsive";
 $blue_light:#1873b7;
 $blue:#0b67aa;
 @-webkit-keyframes downarrow {
@@ -151,17 +152,27 @@ header {
         float: left;
         margin-left: 25px;
         margin-top: 25px;
+        @include responsive("max-width: 1200px") {
+            @include scale(0.8);
+        }
     }
     .header__menu {
         float: right;
         margin-top: 85px;
         .header__menu-item {
             color: #000;
-            font-size: 18px;
+            font-size: 1.4em;
             margin: 0px 15px;
             &:hover,&.active {
                 color: #428bca;
                 text-decoration: none;
+            }
+        }
+
+        @include responsive("max-width: 1200px") {
+            margin-top: 60px;
+            .header__menu-item{
+                font-size: 1.1em;
             }
         }
     }
@@ -181,7 +192,7 @@ header {
             margin-left: 100px;
             .header__menu-item {
                 text-shadow: 2.5px 4.33px 5px rgba(0, 0, 0, .2);
-                font-size: 15px;
+                font-size: 1.1em;
                 -webkit-text-stroke-width: initial;
                 -webkit-text-stroke-color: initial;
                 -webkit-text-fill-color: initial;
@@ -487,6 +498,21 @@ $turquoise:rgba(255, 255, 255, 0.4);
                     padding: 0 40px;
                     vertical-align: bottom;
                 }
+                @include bp(medium) {
+                    a{
+                        padding: 0 15px;
+                    }
+                 }
+                 @include bp(large) {
+                    a{
+                        padding: 0 20px;
+                    }
+                 }
+                 @include bp(xlarge) {
+                    a{
+                        padding: 0 30px;
+                    }
+                 }
                 .project_name{
                     position: absolute;
                     left: 40px;
@@ -502,8 +528,8 @@ $turquoise:rgba(255, 255, 255, 0.4);
                         width: 100%;
                         text-align: center;
                         color: #fff;
-                        font-size: 1.2em;
-                        line-height: 1.3em;
+                        font-size: 1.1em;
+                        line-height: 1.2em;
                         font-weight: 600;
                         font-family: 'Open Sans';
                     }
@@ -532,7 +558,7 @@ $turquoise:rgba(255, 255, 255, 0.4);
                     @include transition(all .25s 0s ease);
                     text-align: center;
                     color: #fff;
-                    font-size: 1.3em;
+                    font-size: 1.2em;
                     font-weight: 700;
                     font-family: 'Open Sans';
                 }
