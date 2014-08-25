@@ -39,6 +39,7 @@ var weCanHelpPage = (function() {
     };
 }());
 $(document).ready(function() {
+    $('body').fadeIn();
     $('#fullpage').fullpage({
         verticalCentered: true,
         resize: true,
